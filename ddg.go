@@ -32,7 +32,7 @@ type SearchResults struct {
 	Redirect      string     `json:"Redirect"`
 }
 
-// Query stuff
+// Query takes a string as parameter and returns SearchResults json
 func Query(qs string) *SearchResults {
 	query := fmt.Sprintf(queryEndpoint, qs)
 	results := new(SearchResults)
